@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Pós Web</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="padding-top: 28px; padding-bottom: 28px; margin-bottom: 80px;">
+  <h1>Projeto Pós Web</h1>
+  <p>Projeto desenvolvido para a disciplina JAVA Frameworks!</p>
+</div>
+
+	<div class="container" style="width: inherit; padding: 5px;">
+  
+		<div style="width: 500px; margin: auto;">
+			<div th:if="${param.error}">
+				<div class="alert alert-danger">Usuário e/ou Senha Inválida!</div>
+			</div>
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+			    	<h3 class="panel-title">Acesse o Sistema</h3>
+			    	
+			    	<div th:if="${param.logout}">
+						<div class="alert alert-info">Até Logo!</div>
+					</div>
+			  	</div>
+			  	
+				<div class="panel-body">
+					<form th:action="@{/login}" method="post" >
+						<div class="form-group">
+							<input name="username" class="form-control" placeholder="Usuário"/>
+						</div>
+
+						<div class="form-group">
+							<input type="password" name="password" class="form-control" placeholder="Senha"/>
+						</div>
+
+						<div class="form-group">
+							<button class="btn btn-primary btn-block">Entrar</button>
+						</div>
+
+						<div class="form-group">
+							<input type="checkbox" id="remember-me" name="remember-me" />
+							<label for="remember-me">Lembrar</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+

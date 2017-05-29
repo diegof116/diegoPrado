@@ -1,0 +1,28 @@
+CREATE SCHEMA 'POS' ;
+
+USE POS;
+CREATE TABLE `CONTATO` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+COMMENT = 'Tabela de contatos apenas com JDBC utilizada para aula 
+de pos graduação em desenvolvimento Web. ';
+
+
+CREATE TABLE `POS`.`TB_CONTATO` (
+  `id` INT NOT NULL,
+  `nome` VARCHAR(45) NULL,
+  `sobrenome` VARCHAR(45) NULL,
+  `telefone` VARCHAR(45) NULL,
+  `email` VARCHAR(255) NULL,
+  `data_criacao` TIMESTAMP NULL,
+  PRIMARY KEY (`id`))
+COMMENT = 'Tabela de contatos utilizada para aula 
+de pos graduação em desenvolvimento Web. ';
+
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+version="2.1">

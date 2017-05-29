@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<section layout:fragment="conteudo">
+	<div class="col-md-12">
+
+		<ol class="breadcrumb" style="margin-top: 40px;">
+			<li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+			<li class="active">Erro</li>
+		</ol>
+		<hr></hr>
+
+		<div class="error-page" style="margin-top: 200px;" align="center">
+
+			<div class="error-content" >
+				<h3>
+					<i class="fa fa-warning text-yellow"></i> Oops! Você não possui permissão para acessar essa página !
+				</h3>
+
+				<p>
+					 Favor, entrar em contato com a administração do sistema, ou <a th:href="@{/}" href="/">Retorne a tela principal</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+</html>
+
+
+
